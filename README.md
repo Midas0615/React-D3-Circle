@@ -1,26 +1,27 @@
-# Emnestigen
-Grafer for emneavhengigheter på NTNU
+
+# Subject trails
+Graphs for subject dependencies at NTNU
 
 ![](demo.gif)
 
 ![](https://i.imgur.com/vTjHD4g.png)
 
-## Om Emnestigen
-Noensinne hatt lyst til å ta et kult emne, men blitt fortapt i en spiral av anbefalte forkunnskaper? Emnestigen er løsningen! Emnestigen lager grafer som viser emneavhengigheter mellom ulike emner. Da kan man enkelt kan finne en god plan for hvilke emner man bør ta for eventuelt å ta et gitt emne.
+## About Emnestigen
+Ever wanted to take a cool subject, but been lost in a spiral of recommended prerequisites? The subject ladder is the solution! The course ladder creates graphs that show topic dependencies between different topics. Then you can easily find a good plan for which topics to take in order to take a given topic.
 
-Emnestigen bruker også en webscraper som for det meste er uavhengig av selve graftegningen, og kan derfor brukes til å bygge datasett om emner ved NTNU.
+The course ladder also uses a web scraper that is mostly independent of the actual drawing, and can therefore be used to build datasets on topics at NTNU.
 
-## Interessante ting å se etter
-Siden emnestigen representerer emneavhengigheter som grafer, kan vi enkelt se informasjon om hvor "slitsomt" det er å nå frem til et emne ved å se hvor mange kanter det er fra emnet. Vi kan til og med om det finnes "catch 22"-er for noen emner ved å sjekke om det finnes sykler i emneavhengighetsgrafen. Grafen nedenfor viser emneavhengighetene til emnet MA8202 (Kommutativ algebra)
+## Interesting things to look out for
+Since the topic ladder represents subject dependencies as graphs, we can easily see information about how "tiring" it is to reach a topic by seeing how many edges it is from the topic. We can even see if there are "catch 22 "s for some topics by checking for bikes in the subject dependency graph. The graph below shows the subject dependencies of the topic MA8202 (Commutative Algebra)
 
 ![](https://i.imgur.com/vTjHD4g.png)
 
-Her kan vi blant annet se at emnet TMA4190 (Introduksjon til topologi) er et svært "slitsomt" emne å sikte på siden det krever  mange forkunnskaper (10 emner, for å være presis). Dessuten kan vi se at vi har noen sykler i grafen! Spesielt denne frekkasen stikker ut:
+Here we can see, among other things, that the topic TMA4190 (Introduction to topology) is a very "tiring" topic to aim at since it requires many prior knowledge (10 topics, to be precise). Also, we can see that we have some bikes in the graph! In particular, this naughty thing stands out:
 
 ![](https://i.imgur.com/Qu5yeQC.png)
 
-Man bør altså ha tatt MA3204 for å ta MA3403, men for å ta MA3403 bør man ha tatt MA3204. Sjekker man emnesidene viser det seg å gå greit siden anbefalingen er å ta emnene samtidig, men det finnes flere sykler...
+So you should have taken MA3204 to take MA3403, but to take MA3403 you should have taken MA3204. If you check the subject pages it turns out to be fine since the recommendation is to take the subjects at the same time, but there are several bicycles ...
 
 ![](https://i.imgur.com/RbmYGLt.png)
 
-... og denne er kanskje litt verre. Grafen viser at for å ta MA3204 bør man, et godt stykke tidligere i studiet, ha tatt TMA4190, men TMA4190 anbefaler MA3204 som en forkunnskap! Titter man nøyere kan man også se at det er sykler i avhengighetsgrafen til TMA4190. Det skal tydeligvis ikke være lett å opparbeide seg forkunnskapene til MA8202, altså!
+... and this one is maybe a little worse. The graph shows that to take MA3204, you should have taken TMA4190, well before the study, but TMA4190 recommends MA3204 as a prerequisite! If you look more closely you can also see that there are bicycles in the dependency graph of TMA4190. Obviously, it should not be easy to build up the prior knowledge of MA8202, that is!
